@@ -1,0 +1,38 @@
+Visual Studio Project.TXT
+
+Created : 2011-04-03
+Last Modified : 2011-04-03
+Author : Tom Coleman
+Copyright : 2011-2011
+By : University of Mississippi Medical Center
+
+The source language is C#. The compiler is Microsoft Visual
+Studio 2010.
+
+We start with File | New | Project
+
+Then select C# windows application.
+
+It is a new solution, a Windows application named Model Solver.
+
+Getting the project located in the correct folder is tricky.
+I'm shooting for an existing SVN folder. So do not create a folder.
+Instead, check an do not create folder option and Visual Studio
+will do the rest.
+
+The correct project details must be specified. They are
+
+# New Project
+# Windows
+# Windows Application
+
+This gets 2 forms files and a main program. Delete all
+immediately. Then add your stuff.
+
+Under Properties | Application, attach icon to application.
+
+Under Properties | Builds, direct compiler output to the
+project root. Otherwise, it is buried in bin\Debug.
+
+
+End

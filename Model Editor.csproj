@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47163BA6-CE00-479C-9C32-5D99AB8BF0CC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Model_Editor</RootNamespace>
+    <AssemblyName>Model Editor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Model Editor.ICO</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutDialogBox.CS">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppMain.CS" />
+    <Compile Include="Clipboard_Dialog.CS">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorHighlighter.CS" />
+    <Compile Include="ColorManager.CS" />
+    <Compile Include="ColorRegistry.CS" />
+    <Compile Include="EditManager.CS" />
+    <Compile Include="FileContextMenu.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FileRegistry.CS" />
+    <Compile Include="FileTree.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FontManager.CS" />
+    <Compile Include="FontRegistry.CS" />
+    <Compile Include="GeneralManager.CS" />
+    <Compile Include="GeneralRegistry.CS" />
+    <Compile Include="Insert_Data.CS" />
+    <Compile Include="Insert_Dialog.CS">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insert_Manager.CS" />
+    <Compile Include="Insert_Registry.CS" />
+    <Compile Include="Insert_Stack.CS" />
+    <Compile Include="IO_Close.CS" />
+    <Compile Include="IO_CloseAll.CS" />
+    <Compile Include="IO_Manager.CS" />
+    <Compile Include="IO_New.CS" />
+    <Compile Include="IO_Open.CS" />
+    <Compile Include="IO_Reader.CS" />
+    <Compile Include="IO_Save.CS" />
+    <Compile Include="IO_SaveAll.CS" />
+    <Compile Include="IO_SaveAs.CS" />
+    <Compile Include="IO_Writer.CS" />
+    <Compile Include="I_ActionButton.CS" />
+    <Compile Include="I_AndIf.CS" />
+    <Compile Include="I_BackwardEuler.CS" />
+    <Compile Include="I_Beep.CS" />
+    <Compile Include="I_Block.CS" />
+    <Compile Include="I_Branch.CS" />
+    <Compile Include="I_CalcLag.CS" />
+    <Compile Include="I_Call.CS" />
+    <Compile Include="I_Case.CS" />
+    <Compile Include="I_CheckBox.CS" />
+    <Compile Include="I_CheckMark.CS" />
+    <Compile Include="I_Common.CS" />
+    <Compile Include="I_Conditional.CS" />
+    <Compile Include="I_Constant.CS" />
+    <Compile Include="I_Control.CS" />
+    <Compile Include="I_Copy.CS" />
+    <Compile Include="I_Curve.CS" />
+    <Compile Include="I_Def.CS" />
+    <Compile Include="I_Definitions.CS" />
+    <Compile Include="I_Delay.CS" />
+    <Compile Include="I_DiffEq.CS" />
+    <Compile Include="I_Display.CS" />
+    <Compile Include="I_DisplayFirst.CS" />
+    <Compile Include="I_Docs.CS" />
+    <Compile Include="I_EditBox.CS" />
+    <Compile Include="I_Equations.CS" />
+    <Compile Include="I_ExitBlock.CS" />
+    <Compile Include="I_Functions.CS" />
+    <Compile Include="I_GroupBox.CS" />
+    <Compile Include="I_If.CS" />
+    <Compile Include="I_ImplicitEq.CS" />
+    <Compile Include="I_ImplicitMath.CS" />
+    <Compile Include="I_InfoButton.CS" />
+    <Compile Include="I_Label.CS" />
+    <Compile Include="I_Lag.CS" />
+    <Compile Include="I_Leaf.CS" />
+    <Compile Include="I_MapList.CS" />
+    <Compile Include="I_MapListPanel.CS" />
+    <Compile Include="I_Math.CS" />
+    <Compile Include="I_Message.CS" />
+    <Compile Include="I_Model.CS" />
+    <Compile Include="I_NormalDist.CS" />
+    <Compile Include="I_Note.CS" />
+    <Compile Include="I_OnJustChanged.CS" />
+    <Compile Include="I_OnTimedOut.CS" />
+    <Compile Include="I_Page.CS" />
+    <Compile Include="I_Panel.CS" />
+    <Compile Include="I_Parm.CS" />
+    <Compile Include="I_ProcessingInstructions.CS" />
+    <Compile Include="I_RadioButtons.CS" />
+    <Compile Include="I_RepeatList.CS" />
+    <Compile Include="I_RepeatListPanel.CS" />
+    <Compile Include="I_Shared.CS" />
+    <Compile Include="I_ShowBargraph.CS" />
+    <Compile Include="I_ShowBitmap.CS" />
+    <Compile Include="I_ShowBitmapFile.CS" />
+    <Compile Include="I_ShowClock.CS" />
+    <Compile Include="I_ShowCurve.CS" />
+    <Compile Include="I_ShowFile.CS" />
+    <Compile Include="I_ShowGraph.CS" />
+    <Compile Include="I_ShowMap.CS" />
+    <Compile Include="I_ShowPanelName.CS" />
+    <Compile Include="I_ShowTable.CS" />
+    <Compile Include="I_ShowValue.CS" />
+    <Compile Include="I_SlideBar.CS" />
+    <Compile Include="I_StableDelay.CS" />
+    <Compile Include="I_StableDiffEq.CS" />
+    <Compile Include="I_Stop.CS" />
+    <Compile Include="I_Structure.CS" />
+    <Compile Include="I_StructureName.CS" />
+    <Compile Include="I_StructureNamePanel.CS" />
+    <Compile Include="I_Symbol.CS" />
+    <Compile Include="I_SymbolPanel.CS" />
+    <Compile Include="I_TestCase.CS" />
+    <Compile Include="I_Timer.CS" />
+    <Compile Include="I_TimerVar.CS" />
+    <Compile Include="I_TopicDoc.CS" />
+    <Compile Include="I_Tree.CS" />
+    <Compile Include="I_ValueBar.CS" />
+    <Compile Include="I_Var.CS" />
+    <Compile Include="I_VarDoc.CS" />
+    <Compile Include="I_Variables.CS" />
+    <Compile Include="I_WhiteNoise.CS" />
+    <Compile Include="MainWindow.CS">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Manager.CS" />
+    <Compile Include="MsgBox.CS" />
+    <Compile Include="M_About.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Clipboard.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Close.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_CloseAll.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Close_Context.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Copy.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Cut.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Edit.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Exit.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_File.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_HeaderFooter.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Help.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Insert.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Main.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_New.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Open.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Options.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_PageSetup.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Paste.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Print.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_PrintPreview.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Refresh.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Root.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Root_Context.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Run.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Save.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_SaveAll.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_SaveAs.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Save_Context.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_Search.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="M_SelectAll.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Note.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OKButton.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Options_Colors.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Options_Dialog.CS">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options_Font.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Options_General.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Options_Registry.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Options_Solving_Combined.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Options_Solving_Controller.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Options_Solving_Executables.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Options_Solving_Model.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Options_Solving_Solver.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PanelLeft.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PanelRight.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PanelTop.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print_HeaderFooter_Dialog.CS" />
+    <Compile Include="Print_HeaderFooter_Manager.CS" />
+    <Compile Include="Print_Manager.CS" />
+    <Compile Include="Print_Registry.CS" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistryManager.CS" />
+    <Compile Include="ResourceManager.CS" />
+    <Compile Include="RunManager.CS" />
+    <Compile Include="RunManager_Combined.CS" />
+    <Compile Include="RunManager_Modular.CS" />
+    <Compile Include="RunRegistry.CS" />
+    <Compile Include="Search_Dialog.CS">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search_Registry.CS" />
+    <Compile Include="State.CS" />
+    <Compile Include="StatusBarManager.CS" />
+    <Compile Include="TabContextMenu.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TabData.CS" />
+    <Compile Include="TabManager.CS" />
+    <Compile Include="ToolBar_Delegate.CS" />
+    <Compile Include="ToolBar_Manager.CS" />
+    <Compile Include="T_Close.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="T_ColorHighLighter.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="T_Copy.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="T_Cut.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="T_New.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="T_Open.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="T_Paste.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="T_Print.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="T_Save.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="T_SaveAll.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="T_Search.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="T_Undo.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User32.CS" />
+    <Compile Include="WindowLocationManager.CS" />
+    <Compile Include="WindowStateManager.CS" />
+    <Compile Include="Window_Splitter.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model Editor.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BMP_Blank.BMP" />
+    <EmbeddedResource Include="BMP_Close.BMP" />
+    <EmbeddedResource Include="BMP_Copy.BMP" />
+    <EmbeddedResource Include="BMP_Cut.BMP" />
+    <EmbeddedResource Include="BMP_New.BMP" />
+    <EmbeddedResource Include="BMP_Open.BMP" />
+    <EmbeddedResource Include="BMP_Paste.BMP" />
+    <EmbeddedResource Include="BMP_Save.BMP" />
+    <EmbeddedResource Include="BMP_SaveAll.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BMP_ColorHighlighter.BMP" />
+    <EmbeddedResource Include="BMP_Print.BMP" />
+    <EmbeddedResource Include="BMP_Search.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BMP_Undo.BMP" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
